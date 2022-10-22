@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .topleft-padding {
+        padding-top: 5%;
+        padding-left: 5%;
+    }
+    .center_XY {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+    }
+    .btn-primary {
+        text-align: center;
+    }
+    .right-bottom_align {
+        margin-left: 100%;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+    .left-bottom_align {
+        margin-right: 100%;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+    .center_XYlower {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        -ms-transform: translate(-50%, -58%);
+        transform: translate(-50%, -58%);
+        text-align: center;
+    }
+</style>
+<div class="topleft-padding">
+    <h1>Please enter the folder to install to</h1>
+</div>
+<div class="center_XY">
+    <a class="btn btn-primary" onclick="get_install_dir()" role="button">Choose dir</a>
+</div>
+<div class="center_XYlower">
+    <p class="truncate" id="install_dir"></p>
+</div>
+<div class="right-bottom_align" id="rightbottom">
+    <a class="btn btn-primary disabled" role="button" aria-disabled="true">Next</a>
+</div>
+<div class="left-bottom_align">
+    <a class="btn btn-primary" role="button" href="/">Back</a>
+</div>
+<script>
+    function get_install_dir () {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', "http://localhost:34620/get_install_directory/", true);
+        xhr.send();
+
+        xhr.onreadystatechange = processRequest;
+
+        function processRequest(e) {
+            if (xhr.readyState == 4) {
+                doc = document.getElementById("install_dir");
+                if (xhr.responseText == "") {
+
+                } else {
+                    doc.innerText = xhr.responseText;
+                    doc = document.getElementById("rightbottom")
+                    doc.innerHTML = '<a class="btn btn-primary" href="/phase3" role="button">Next</a>';
+                }
+            }
+        }
+    }
+
+</script>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .center {
+        text-align: center;
+        padding-top: 20%;
+    }
+    .right-bottom_align {
+        margin-left: 100%;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+    .left-bottom_align {
+        margin-right: 100%;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+</style>
+<div class="center">
+    <img src="/static/Jumpster.png" width=500></img>
+    <br/>
+    <br/>
+    <h3>Press next to continue</h3>
+</div>
+<div class="right-bottom_align">
+    <a class="btn btn-primary" href="/phase2" role="button">Next</a>
+</div>
+<div class="left-bottom_align">
+    <a class="btn btn-primary disabled" role="button" aria-disabled="true">Back</a>
+</div>
+{% endblock %}
