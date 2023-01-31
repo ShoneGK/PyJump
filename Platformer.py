@@ -523,11 +523,11 @@ def game_loop():
         
 if __name__ == '__main__':
     for i in range (155, 0, -1):
-        screen.fill((0,0,0))
+        screen.fill((255,255,255))
         image.set_alpha(i)
         screen.blit(image, centered_image)
         pygame.display.update()
         sleep(0.001)
 
-      Start_Screen()
-      game_loop()
+     Start_Screen()
+     game_loop()
