@@ -67,7 +67,7 @@ quarter = half / 2
 right = half + quarter
 font = pygame.font.SysFont("Arial", 25)
 display_size = (pygame.display.Info().current_w , pygame.display.Info().current_h)
-image = pygame.image.load(r'userx.png')
+image = pygame.image.load(r'SGK.png')
 image_size = image.get_rect().size
 centered_image = [(display_size[0] - image_size[0])/2, (display_size[1] - image_size[1])/2]
 
@@ -520,12 +520,14 @@ def game_loop():
         pygame.display.update()
         clock.tick(FPS)
 
-for i in range (155, 0, -1):
-    screen.fill((0,0,0))
-    image.set_alpha(i)
-    screen.blit(image, centered_image)
-    pygame.display.update()
-    sleep(0.001)
+        
+if __name__ == '__main__':
+    for i in range (155, 0, -1):
+        screen.fill((0,0,0))
+        image.set_alpha(i)
+        screen.blit(image, centered_image)
+        pygame.display.update()
+        sleep(0.001)
 
-Start_Screen()
-game_loop()
+      Start_Screen()
+      game_loop()
