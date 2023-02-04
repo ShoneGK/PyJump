@@ -5,13 +5,10 @@ STUFF TO REMEMBER:
 
 
 TODO:
-    add cutscenes, screenshake, and shaders if i am smart inough to do so :P
-    someone please fix the run animation i cant do pixel art
+    Fix pixel art
 
 newest update:
-    cleaned up
-    fixed loading screen bug
-    started work on class version
+    removed unused files
 
 """
 
@@ -72,7 +69,7 @@ image_size = image.get_rect().size
 centered_image = [(display_size[0] - image_size[0])/2, (display_size[1] - image_size[1])/2]
 
 for i in range (155):
-    screen.fill((0,0,0))
+    screen.fill((255,255,255))
     image.set_alpha(i)
     screen.blit(image, centered_image)
     pygame.display.update()
@@ -352,7 +349,7 @@ def game_loop():
     global FPS
     player_flip = False
     grass_sound_timer = 0
-    player_rect = pygame.Rect(150, 200, 25, 35)
+    player_rect = pygame.Rect(150, 300, 25, 35)
     global game_map
     global game_level
     right_timer = 0
@@ -523,11 +520,11 @@ def game_loop():
         
 if __name__ == '__main__':
     for i in range (155, 0, -1):
-        screen.fill((0,0,0))
+        screen.fill((255,255,255))
         image.set_alpha(i)
         screen.blit(image, centered_image)
         pygame.display.update()
         sleep(0.001)
 
-      Start_Screen()
-      game_loop()
+    Start_Screen()
+    game_loop()
