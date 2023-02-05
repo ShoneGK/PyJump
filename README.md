@@ -25,3 +25,4 @@ PyJump uses the Pygame renderer and PIL for system operations
 - sound effects
 - multiple textures
 - proper objective
+- FPS counter
