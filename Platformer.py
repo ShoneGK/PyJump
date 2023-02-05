@@ -49,7 +49,7 @@ clock = pygame.time.Clock()
 pygame.init()  # initiates pygame
 pygame.mixer.init()
 pygame.mixer.set_num_channels(64)
-pygame.display.set_caption('Jumpster | Beta version 2.0')
+pygame.display.set_caption('Jumpster')
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)  # initiate the window
 displayInfo = pygame.display.Info()
 width = displayInfo.current_w
