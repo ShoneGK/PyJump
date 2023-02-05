@@ -2,7 +2,7 @@
 # PyJump
 The Ultimate Python Platformer
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://raw.githubusercontent.com/ShoneGK/PyJump/main/images/Screenshot.png)
 
 ## Authors
 - [@ShoneGK](https://github.com/ShoneGK)
