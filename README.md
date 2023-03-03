@@ -28,3 +28,6 @@ PyJump uses the Pygame renderer and PIL for system operations
 - multiple textures
 - proper objective
 - FPS counter
+
+## Status
+ This project has been completed and is used as a portfolio project
